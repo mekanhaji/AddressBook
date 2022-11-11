@@ -9,3 +9,4 @@ CREATE TABLE data (
     address VARCHAR(255) NOT NULL,
 );
 ```
+[credit](https://codewithawa.com/posts/php-crud-create,-edit,-update-and-delete-posts-with-mysql-database)
