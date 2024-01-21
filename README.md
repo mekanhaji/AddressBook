@@ -6,7 +6,14 @@ First, create a database named crud. In the crud database, create a table called
 CREATE TABLE data (
     id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
     name VARCHAR(100) NOT NULL,
-    address VARCHAR(255) NOT NULL,
+    address VARCHAR(255) NOT NULL
 );
 ```
-[credit](https://codewithawa.com/posts/php-crud-create,-edit,-update-and-delete-posts-with-mysql-database)
+## to start server
+```bash
+docker-compose up
+```
+## to stop server
+```bash
+docker-compose down
+```
