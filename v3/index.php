@@ -17,7 +17,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>CRUD: CReate, Update, Delete PHP MySQL</title>
+	<title>Address Book</title>
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
