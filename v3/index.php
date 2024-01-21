@@ -4,7 +4,7 @@
 	if (isset($_GET['edit'])) {
 		$id = $_GET['edit'];
 		$update = true;
-		$record = mysqli_query($db, "SELECT * FROM info WHERE id=$id");
+		$record = mysqli_query($db, "SELECT * FROM data WHERE id=$id");
 
 		if (/*count($record) == 1*/1 ) {
 			$n = mysqli_fetch_array($record);
@@ -30,7 +30,7 @@
         </div>
     <?php endif ?>
 
-    <?php $results = mysqli_query($db, "SELECT * FROM info"); ?>
+    <?php $results = mysqli_query($db, "SELECT * FROM data"); ?>
 
     <table>
         <thead>
