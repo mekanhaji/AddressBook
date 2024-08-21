@@ -77,3 +77,17 @@ form {
     width: 50%;
     text-align: center;
 }
+
+.header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-title {
+    margin: 0;
+}
+
+.contaner {
+    margin: 30px auto;
+    max-width: 70%;
+}
