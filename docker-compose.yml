@@ -16,6 +16,7 @@ services:
     ports:
       - 80:80
       - 443:443 # for future ssl traffic
+    command: bash -c "docker-php-ext-install mysqli && apache2-foreground"
   phpmyadmin:
     image: phpmyadmin/phpmyadmin
     ports:
