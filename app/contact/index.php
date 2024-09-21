@@ -25,24 +25,34 @@ if (isset($_GET['edit'])) {
 </head>
 
 <body>
-	<form method="post" action="../server.php">
-		<input type="hidden" name="id" value="<?php echo $id; ?>">
-		<div class="input-group">
-			<label>Name</label>
-			<input type="text" name="name" value="<?php echo $name; ?>">
+	<main>
+		<div class="header container">
+			<h2 class="header-title">
+				Address Book
+			</h2>
 		</div>
-		<div class="input-group">
-			<label>Address</label>
-			<input type="text" name="address" value="<?php echo $address; ?>">
-		</div>
-		<div class="input-group">
-			<?php if ($update == true): ?>
-				<button class="btn" type="submit" name="update" style="background: #556B2F;">update</button>
-			<?php else: ?>
-				<button class="btn" type="submit" name="save">Save</button>
-			<?php endif ?>
-		</div>
-	</form>
+
+		<section class="container">
+			<form method="post" action="/app/server.php">
+				<input type="hidden" name="id" value="<?php echo $id; ?>">
+				<div class="input-group">
+					<label>Name</label>
+					<input type="text" name="name" value="<?php echo $name; ?>">
+				</div>
+				<div class="input-group">
+					<label>Address</label>
+					<input type="text" name="address" value="<?php echo $address; ?>">
+				</div>
+				<div class="input-group">
+					<?php if ($update == true): ?>
+						<button class="btn" type="submit" name="update">Update</button>
+					<?php else: ?>
+						<button class="btn" type="submit" name="save">Create</button>
+					<?php endif ?>
+				</div>
+			</form>
+		</section>
+	</main>
 </body>
 
 </html>

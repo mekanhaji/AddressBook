@@ -12,7 +12,7 @@
     <?php $results = mysqli_query($db, 'SELECT * FROM data'); ?>
 
     <main>
-        <div class="header contaner">
+        <div class="header container">
             <h2 class="header-title">
                 Address Book
             </h2>
