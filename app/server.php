@@ -1,7 +1,8 @@
 <?php 
 	session_start();
-	$db = mysqli_connect('db', 'kanhaji', 'password', 'crud');
-
+	$db = mysqli_connect('localhost', 'root', 'admin', 'crud');
+	// Docker
+	// $db = mysqli_connect('localhost', 'root', 'admin', 'crud');
 	// initialize variables
 	$name = "";
 	$address = "";
