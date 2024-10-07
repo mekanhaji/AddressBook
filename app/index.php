@@ -24,7 +24,7 @@
         </div>
 
         <?php if (isset($_SESSION['message'])) { ?>
-            <div class="msg">
+            <div class="msg hide-animation">
                 <?php echo $_SESSION['message'];
                 unset($_SESSION['message']);
                 ?>

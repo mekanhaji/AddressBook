@@ -138,6 +138,21 @@ main {
   text-align: center;
 }
 
+.hide-animation {
+  animation: hide 2s forwards;
+}
+
+@keyframes hide {
+  0% {
+    opacity: 1;
+    display: block;
+  }
+  100% {
+    opacity: 0;
+    display: none;
+  }
+}
+
 .header {
   display: flex;
   justify-content: space-between;
