@@ -1,4 +1,11 @@
-<?php include('../server.php'); ?>
+<?php
+include('../server.php');
+session_start();
+if (!isset($_SESSION['user'])) {
+	$_SESSION['message'] = "You must log in first";
+	header('location: auth/login.php');
+}
+?>
 
 <?php
 if (isset($_GET['edit'])) {
