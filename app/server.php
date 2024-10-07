@@ -51,3 +51,11 @@ if (isset($_POST['login'])) {
 		header('location: auth/login.php');
 	}
 }
+
+if (isset($_GET['logout'])) {
+	session_destroy();
+	unset($_SESSION['user']);
+
+	$_SESSION['message'] = "You are logged out!";
+	header('location: auth/login.php');
+}

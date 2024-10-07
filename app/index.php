@@ -18,10 +18,18 @@
             <h2 class="header-title">
                 Address Book
             </h2>
-            <a href="contact" class="btn add_user_btn">
-                <img src="/assets/add-user.svg" alt="" height="20px" width="20px">
-                <!-- Add User -->
-            </a>
+            <div style="display: flex; gap: 5px;">
+                <a href="contact" class="btn add_user_btn">
+                    <img src="/assets/add-user.svg" alt="" height="20px" width="20px">
+                    <!-- Add User -->
+                </a>
+
+                <a href="server.php?logout" class="btn del_btn">
+                    <img src="/assets/logout.svg" alt="" height="20px" width="20px">
+                    Logout
+                </a>
+            </div>
+
         </div>
 
         <?php if (isset($_SESSION['message'])) { ?>
