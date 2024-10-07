@@ -22,12 +22,9 @@ if (isset($_SESSION['user'])) {
 <body>
     <main>
         <div class="header container">
-            <a href="/app/" style="text-decoration: none; color: white">
-                <h2 class="header-title">
-                    <img src="/assets/back.svg" alt="" height="20px" width="20px" style="stroke:white;">
-                    Address Book
-                </h2>
-            </a>
+            <h2 class="header-title">
+                Address Book
+            </h2>
         </div>
 
         <?php if (isset($_SESSION['message'])) { ?>
