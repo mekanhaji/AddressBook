@@ -5,6 +5,7 @@ if (!isset($_SESSION['user'])) {
     $_SESSION['message'] = "You must log in first";
     header('location: auth/login.php');
 }
+$user_id = $_SESSION['user_id'];
 ?>
 
 <!DOCTYPE html>
@@ -18,7 +19,12 @@ if (!isset($_SESSION['user'])) {
 </head>
 
 <body>
-    <?php $results = mysqli_query($db, 'SELECT * FROM data'); ?>
+    <?php
+    $stmt = $db->prepare("SELECT * FROM contacts WHERE user_id =?");
+    $stmt->bind_param("i", $user_id);
+    $stmt->execute();
+    $results = $stmt->get_result();
+    ?>
 
     <main>
         <div class="header container">
@@ -59,7 +65,7 @@ if (!isset($_SESSION['user'])) {
             <?php while ($row = mysqli_fetch_array($results)) { ?>
                 <tr>
                     <td><?php echo $row['name']; ?></td>
-                    <td><?php echo $row['address']; ?></td>
+                    <td><?php echo $row['city']; ?></td>
                     <td style="padding-block: 15px;" align="center">
                         <a href="contact?edit=<?php echo $row['id']; ?>" class="btn edit_btn">
                             <img src="/assets/edit-user.svg" alt="" height="20px" width="20px">
