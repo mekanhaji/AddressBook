@@ -21,15 +21,19 @@ if (isset($_GET['edit'])) {
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="/app/style.css">
+	<link rel="shortcut icon" href="/assets/logo.svg" type="image/svg+xml">
 	<title>Address Book</title>
 </head>
 
 <body>
 	<main>
 		<div class="header container">
-			<h2 class="header-title">
-				Address Book
-			</h2>
+			<a href="/app/" style="text-decoration: none; color: white">
+				<h2 class="header-title">
+					<img src="/assets/back.svg" alt="" height="20px" width="20px" style="stroke:white;">
+					Address Book
+				</h2>
+			</a>
 		</div>
 
 		<section class="container">

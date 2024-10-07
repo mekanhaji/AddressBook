@@ -67,14 +67,14 @@ main {
   background-color: var(--bg-color);
 }
 
-form {
-  /* width: 45%;
+/* form {
+  width: 45%;
   margin: 50px auto;
   text-align: left;
   padding: 20px;
   border: 1px solid #bbbbbb;
-  border-radius: 5px; */
-}
+  border-radius: 5px;
+} */
 
 .input-group {
   margin: 10px 0px 10px 0px;
@@ -101,10 +101,14 @@ form {
   background: var(--primary-color);
   border: none;
   border-radius: 5px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .edit_btn {
   text-decoration: none;
-  padding: 2px 5px;
+  /* padding: 2px 5px; */
   background: var(--primary-color);
   color: white;
   border-radius: 3px;
@@ -112,11 +116,17 @@ form {
 
 .del_btn {
   text-decoration: none;
-  padding: 2px 5px;
+  /* padding: 2px 5px; */
   color: white;
   border-radius: 3px;
   background: #800000;
 }
+
+.add_user_btn {
+  text-decoration: none;
+  /* padding: 2px 5px; */
+}
+
 .msg {
   margin: 30px auto;
   padding: 10px;

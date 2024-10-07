@@ -6,6 +6,7 @@
 <head>
     <title>Address Book</title>
     <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="shortcut icon" href="/assets/logo.svg" type="image/svg+xml">
 </head>
 
 <body>
@@ -16,7 +17,10 @@
             <h2 class="header-title">
                 Address Book
             </h2>
-            <a href="contact" class="btn"> + Add</a>
+            <a href="contact" class="btn add_user_btn">
+                <img src="/assets/add-user.svg" alt="" height="20px" width="20px">
+                <!-- Add User -->
+            </a>
         </div>
 
         <?php if (isset($_SESSION['message'])) { ?>
@@ -32,7 +36,7 @@
                 <tr>
                     <th>Name</th>
                     <th>Address</th>
-                    <th colspan="2">Action</th>
+                    <th align="center" colspan="2">Action</th>
                 </tr>
             </thead>
 
@@ -40,11 +44,17 @@
                 <tr>
                     <td><?php echo $row['name']; ?></td>
                     <td><?php echo $row['address']; ?></td>
-                    <td>
-                        <a href="contact?edit=<?php echo $row['id']; ?>" class="edit_btn">Edit</a>
+                    <td style="padding-block: 15px;" align="center">
+                        <a href="contact?edit=<?php echo $row['id']; ?>" class="btn edit_btn">
+                            <img src="/assets/edit-user.svg" alt="" height="20px" width="20px">
+                            <!-- Edit -->
+                        </a>
                     </td>
-                    <td>
-                        <a href="server.php?del=<?php echo $row['id']; ?>" class="del_btn">Delete</a>
+                    <td align="center">
+                        <a href="server.php?del=<?php echo $row['id']; ?>" class="btn del_btn">
+                            <img src="/assets/delete-user.svg" alt="" height="20px" width="20px">
+                            <!-- Delete -->
+                        </a>
                     </td>
                 </tr>
             <?php } ?>
