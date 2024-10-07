@@ -2,9 +2,9 @@ CREATE DATABASE address_book;
 USE address_book;
 
 CREATE TABLE users (
-    id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
-    username VARCHAR(100) NOT NULL UNIQUE,
-    password VARCHAR(255) NOT NULL
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  username VARCHAR(50) NOT NULL,
+  password VARCHAR(255) NOT NULL
 );
 
 INSERT INTO users (id, username, password) VALUES ( 0, 'admin', 'admin');

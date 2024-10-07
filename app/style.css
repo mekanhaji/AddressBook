@@ -131,11 +131,19 @@ main {
   margin: 30px auto;
   padding: 10px;
   border-radius: 5px;
-  color: #3c763d;
   background: #dff0d8;
-  border: 1px solid #3c763d;
   width: 50%;
   text-align: center;
+}
+
+.msg-success {
+  color: #3c763d;
+  border: 1px solid #3c763d;
+}
+
+.msg-error {
+  color: #a94442;
+  border: 1px solid #a94442;
 }
 
 .hide-animation {

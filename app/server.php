@@ -34,3 +34,52 @@ if (isset($_GET['del'])) {
 	$_SESSION['message'] = "Address deleted!";
 	header('location: index.php');
 }
+
+if (isset($_POST['login'])) {
+	$username = $_POST['username'];
+	$password = $_POST['password'];
+
+	$query = "SELECT * FROM users WHERE username='$username' AND password='$password'";
+	$results = mysqli_query($db, $query);
+
+	if (mysqli_num_rows($results) == 1) {
+		$_SESSION['user'] = $username;
+		$_SESSION['message'] = "Hello 🙌🏼" . $username . ", You are Logged in!";
+		header('location: index.php');
+	} else {
+		$_SESSION['message'] = "Username/Password combination incorrect";
+		header('location: auth/login.php');
+	}
+}
+
+if (isset($_GET['logout'])) {
+	session_destroy();
+	unset($_SESSION['user']);
+
+	$_SESSION['message'] = "You are logged out!";
+	header('location: auth/login.php');
+}
+
+if (isset($_POST['signup'])) {
+	$username = $_POST['username'];
+	$password = $_POST['password'];
+	$confirm_password = $_POST['confirm-password'];
+
+	if ($password == $confirm_password) {
+		$query = "SELECT * FROM users WHERE username='$username'";
+		$results = mysqli_query($db, $query);
+
+		if (mysqli_num_rows($results) == 0) {
+			mysqli_query($db, "INSERT INTO users (username, password) VALUES ('$username', '$password')");
+			$_SESSION['user'] = $username;
+			$_SESSION['message'] = "Hello 🙌🏼" . $username . ", You are Logged in!";
+			header('location: index.php');
+		} else {
+			$_SESSION['message'] = "Username already exists";
+			header('location: auth/signup.php');
+		}
+	} else {
+		$_SESSION['message'] = "Password mismatch";
+		header('location: auth/signup.php');
+	}
+}

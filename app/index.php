@@ -1,4 +1,11 @@
-<?php include 'server.php'; ?>
+<?php
+include 'server.php';
+session_start();
+if (!isset($_SESSION['user'])) {
+    $_SESSION['message'] = "You must log in first";
+    header('location: auth/login.php');
+}
+?>
 
 <!DOCTYPE html>
 <html>
@@ -18,14 +25,22 @@
             <h2 class="header-title">
                 Address Book
             </h2>
-            <a href="contact" class="btn add_user_btn">
-                <img src="/assets/add-user.svg" alt="" height="20px" width="20px">
-                <!-- Add User -->
-            </a>
+            <div style="display: flex; gap: 5px;">
+                <a href="contact" class="btn add_user_btn">
+                    <img src="/assets/add-user.svg" alt="" height="20px" width="20px">
+                    <!-- Add User -->
+                </a>
+
+                <a href="server.php?logout" class="btn del_btn">
+                    <img src="/assets/logout.svg" alt="" height="20px" width="20px">
+                    Logout
+                </a>
+            </div>
+
         </div>
 
         <?php if (isset($_SESSION['message'])) { ?>
-            <div class="msg hide-animation">
+            <div class="msg msg-success hide-animation">
                 <?php echo $_SESSION['message'];
                 unset($_SESSION['message']);
                 ?>
