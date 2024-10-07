@@ -7,6 +7,7 @@
     <title>Address Book</title>
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="shortcut icon" href="/assets/logo.svg" type="image/svg+xml">
+    <link rel="manifest" href="/app/manifest.json">
 </head>
 
 <body>
