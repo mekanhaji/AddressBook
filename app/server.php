@@ -44,6 +44,7 @@ if (isset($_POST['login'])) {
 
 	if (mysqli_num_rows($results) == 1) {
 		$_SESSION['user'] = $username;
+		$_SESSION['user_id'] = mysqli_fetch_assoc($results)['id'];
 		$_SESSION['message'] = "Hello 🙌🏼" . $username . ", You are Logged in!";
 		header('location: index.php');
 	} else {
@@ -72,6 +73,7 @@ if (isset($_POST['signup'])) {
 		if (mysqli_num_rows($results) == 0) {
 			mysqli_query($db, "INSERT INTO users (username, password) VALUES ('$username', '$password')");
 			$_SESSION['user'] = $username;
+			$_SESSION['user_id'] = mysqli_insert_id($db);
 			$_SESSION['message'] = "Hello 🙌🏼" . $username . ", You are Logged in!";
 			header('location: index.php');
 		} else {
