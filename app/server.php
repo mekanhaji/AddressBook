@@ -34,3 +34,20 @@ if (isset($_GET['del'])) {
 	$_SESSION['message'] = "Address deleted!";
 	header('location: index.php');
 }
+
+if (isset($_POST['login'])) {
+	$username = $_POST['username'];
+	$password = $_POST['password'];
+
+	$query = "SELECT * FROM users WHERE username='$username' AND password='$password'";
+	$results = mysqli_query($db, $query);
+
+	if (mysqli_num_rows($results) == 1) {
+		$_SESSION['user'] = $username;
+		$_SESSION['message'] = "Hello 🙌🏼" . $username . ", You are Logged in!";
+		header('location: index.php');
+	} else {
+		$_SESSION['message'] = "Username/Password combination incorrect";
+		header('location: auth/login.php');
+	}
+}
