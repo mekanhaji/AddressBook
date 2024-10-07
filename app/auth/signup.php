@@ -46,9 +46,14 @@ if (isset($_SESSION['user'])) {
                     <label>Password</label>
                     <input type="text" name="password">
                 </div>
+
+                <div class="input-group">
+                    <label>Confirm Password</label>
+                    <input type="text" name="confirm-password">
+                </div>
                 <div class="input-group" style="display: flex; align-items: center; gap:10px">
-                    <button class="btn" type="submit" name="login">Login</button>
-                    <a href="/app/auth/signup.php">Not Sign up yet?</a>
+                    <button class="btn" type="submit" name="signup">Sign Up</button>
+                    <a href="/app/auth/login.php">Already an user?</a>
                 </div>
             </form>
         </section>
