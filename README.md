@@ -33,7 +33,7 @@ assets/
 │       └── logout.svg
 sql/
 ├── init.sql
-├── manifest.json
+manifest.json
 docker-compose.yml
 ```
 
