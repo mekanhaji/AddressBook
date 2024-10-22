@@ -24,13 +24,13 @@ assets/
 ├── icons/
 │   ├── android/
 │   ├── ios/
-│   └── windows11/
-│       ├── add-user.svg
-│       ├── back.svg
-│       ├── delete-user.svg
-│       ├── edit-user.svg
-│       ├── logo.svg
-│       └── logout.svg
+│   ├── windows11/
+│   ├── add-user.svg
+│   ├── back.svg
+│   ├── delete-user.svg
+│   ├── edit-user.svg
+│   ├── logo.svg
+│   └── logout.svg
 sql/
 ├── init.sql
 manifest.json
