@@ -18,7 +18,6 @@ app/
 │   └── signup.php
 ├── contact/
 │   ├── index.php
-│   ├── manifest.json
 │   ├── server.php
 │   └── style.css
 assets/
@@ -33,7 +32,8 @@ assets/
 │       ├── logo.svg
 │       └── logout.svg
 sql/
-└── init.sql
+├── init.sql
+├── manifest.json
 docker-compose.yml
 ```
 
