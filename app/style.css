@@ -147,12 +147,16 @@ main {
 }
 
 .hide-animation {
-  animation: hide 2s forwards;
+  animation: hide 5s forwards;
 }
 
 @keyframes hide {
   0% {
     opacity: 1;
+    display: block;
+  }
+  90% {
+    opacity: 0.8;
     display: block;
   }
   100% {
