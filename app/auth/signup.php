@@ -44,12 +44,12 @@ if (isset($_SESSION['user'])) {
                 </div>
                 <div class="input-group">
                     <label>Password</label>
-                    <input type="text" name="password">
+                    <input type="password" name="password">
                 </div>
 
                 <div class="input-group">
                     <label>Confirm Password</label>
-                    <input type="text" name="confirm-password">
+                    <input type="password" name="confirm-password">
                 </div>
                 <div class="input-group" style="display: flex; align-items: center; gap:10px">
                     <button class="btn" type="submit" name="signup">Sign Up</button>
